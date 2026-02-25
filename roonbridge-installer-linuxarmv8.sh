@@ -240,7 +240,7 @@ function install {
         cat > $SERVICE_FILE << END_SYSTEMD
 [Unit]
 Description=$PACKAGE_NAME
-After=network-online.target
+After=network.target
 
 [Service]
 Type=simple
@@ -248,7 +248,7 @@ User=root
 Environment=ROON_DATAROOT=/var/roon
 Environment=ROON_ID_DIR=/var/roon
 ExecStart=/opt/$PACKAGE_NAME/start.sh
-Restart=on-abort
+Restart=always
 
 [Install]
 WantedBy=multi-user.target
