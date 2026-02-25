@@ -249,6 +249,7 @@ Environment=ROON_DATAROOT=/var/roon
 Environment=ROON_ID_DIR=/var/roon
 ExecStart=/opt/$PACKAGE_NAME/start.sh
 Restart=always
+RestartSec=3
 
 [Install]
 WantedBy=multi-user.target
